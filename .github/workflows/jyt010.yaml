@@ -1,4 +1,4 @@
-name: mzbox_android_build
+name: jyt010_android_build
 
 on:
   workflow_dispatch:
