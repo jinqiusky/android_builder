@@ -15,7 +15,7 @@ jobs:
           java-version: 11
       - id: get-project
         name: Get project name
-        run: echo "::set-output name=PROJECT::$(cat mzbox)"
+        run: echo "::set-output name=PROJECT::$(cat jyt010)"
       - name: Clone project
         run: git clone --depth=1 ${{ steps.get-project.outputs.PROJECT }} project
       - name: Build the app
@@ -28,5 +28,5 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v2
         with:
-          name: my-mzbox-apk
+          name: my-jyt010-apk
           path: ./**/*.apk
